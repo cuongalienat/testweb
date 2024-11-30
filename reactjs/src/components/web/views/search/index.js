@@ -38,13 +38,13 @@ const getProductsFromReact = async ()=>{
                                 :
                                 ''
                             }
-                            <Link to={`detail/${item.slug}/${item.id}`}  className="change">
+                            <Link to={`/product/detail/${item.slug}/${item.id}`}  className="change">
                                         <img src={`${IMG_URL}/${item.photo}`} alt={item.name} className="img-fluid"/>
                                         <ProductPhoto productId={item.id} IMG_URL={IMG_URL} />
                                     </Link>
                         </div>
                         <div className="product-title">
-                            <Link to={`detail/${item.slug}/${item.id}`}>{item.name}</Link>
+                            <Link to={`/product/detail/${item.slug}/${item.id}`}>{item.name}</Link>
                             <p>{new Intl.NumberFormat().format(item.price)}đ <del className="card-price-old">{item.discount ? item.discount+'đ' : ''}</del></p>
                         </div>
                     </div>

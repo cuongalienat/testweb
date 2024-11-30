@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 // app headers
 app.use(function(req,res,next){
     // website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin',process.env.URL_REACT);
+    res.setHeader('Access-Control-Allow-Origin',process.env.URL_REACT || 'http://localhost:3000');
     
     // request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods','GET, POST, OPTIONS, PUT, PATCH, DELETE');
